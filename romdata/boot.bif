@@ -1,0 +1,6 @@
+QSPI_ROM_IMAGE:
+{
+	[bootloader]fsbl.elf
+	bitstream.bit
+	app.elf
+}
