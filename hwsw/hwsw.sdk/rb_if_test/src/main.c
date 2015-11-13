@@ -63,7 +63,7 @@ int main(void)
    fflush(stdout);
    print("\r\n");
 
-#define ARRAY_SIZE ((1<<16) * 16)
+#define ARRAY_SIZE ((1<<10) * 16)
    // Try to access memory
    volatile unsigned int *tx_addr = (volatile unsigned int *)0x43C00000;
    volatile unsigned *arr = &_end;
