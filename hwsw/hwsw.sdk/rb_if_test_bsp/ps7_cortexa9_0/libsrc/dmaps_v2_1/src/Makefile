@@ -19,7 +19,7 @@ INCLUDEFILES:=*.h
 
 OBJECTS =	$(addsuffix .o, $(basename $(wildcard *.c)))
 
-libs: banner xdmaps_libs clean
+libs: banner xdmaps_libs
 
 %.o: %.c
 	${COMPILER} $(CC_FLAGS) $(ECC_FLAGS) $(INCLUDES) -o $@ $<
