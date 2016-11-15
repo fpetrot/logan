@@ -14,7 +14,7 @@ C_SRCS += \
 ../src/nand.c \
 ../src/nor.c \
 ../src/pcap.c \
-/home/petrot/Developpement/vivado/zybo/vivadoprj/hwsw/hwsw.sdk/design_1_wrapper_hw_platform_3/ps7_init.c \
+../../../design_1_wrapper_hw_platform_3/ps7_init.c \
 ../src/qspi.c \
 ../src/rsa.c \
 ../src/sd.c 
@@ -57,21 +57,21 @@ C_DEPS += \
 src/%.o: ../src/%.S
 	@echo 'Building file: $<'
 	@echo 'Invoking: ARM gcc compiler'
-	arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"/home/petrot/Developpement/vivado/logan/hwsw/hwsw.sdk/design_1_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"$@" -I../../myfsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"../../design_1_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"$@" -I../../myfsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
 src/%.o: ../src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: ARM gcc compiler'
-	arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"/home/petrot/Developpement/vivado/logan/hwsw/hwsw.sdk/design_1_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"$@" -I../../myfsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"../../design_1_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"$@" -I../../myfsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-src/ps7_init.o: /home/petrot/Developpement/vivado/logan/hwsw/hwsw.sdk/design_1_wrapper_hw_platform_3/ps7_init.c
+src/ps7_init.o: ../../design_1_wrapper_hw_platform_3/ps7_init.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: ARM gcc compiler'
-	arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"/home/petrot/Developpement/vivado/logan/hwsw/hwsw.sdk/design_1_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"$@" -I../../myfsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"../../design_1_wrapper_hw_platform_3" -c -fmessage-length=0 -MT"$@" -I../../myfsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
