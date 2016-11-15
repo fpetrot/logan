@@ -35,7 +35,7 @@ all: myfsbl.elf secondary-outputs
 myfsbl.elf: $(OBJS) ../src/lscript.ld $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM gcc linker'
-	arm-xilinx-eabi-gcc -L"/home/petrot/Developpement/vivado/logan/hwsw/hwsw.sdk/myfsbl/src" -Wl,-T -Wl,../src/lscript.ld -L../../myfsbl_bsp/ps7_cortexa9_0/lib -o "myfsbl.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-xilinx-eabi-gcc -L"../../myfsbl/src" -Wl,-T -Wl,../src/lscript.ld -L../../myfsbl_bsp/ps7_cortexa9_0/lib -o "myfsbl.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
